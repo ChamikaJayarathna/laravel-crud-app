@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Create a Products</h1>
-    <form action="" method="POST">
+    <form action="{{ route('products.store') }}" method="POST">
         <div class="">
             <label for="name">Name:</label>
             <input type="text" name="name" placeholder="name"/>
