@@ -7,7 +7,18 @@
 </head>
 <body>
     <h1>Create a Products</h1>
+    <div class="">
+        @if ($errors->any())
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
     <form action="{{ route('products.store') }}" method="POST">
+        @csrf
+        @method('post')
         <div class="">
             <label for="name">Name:</label>
             <input type="text" name="name" placeholder="name"/>
