@@ -15,6 +15,9 @@
         @endif
     </div>
     <div class="">
+        <div class="">
+            <a href="{{ route('products.create') }}">Create a Product</a>
+        </div>
         <table border="1">
             <tr>
                 <th>ID</th>
@@ -37,7 +40,7 @@
                             <a href="{{ route('products.edit', ['product' => $product]) }}">Edit</a>
                         </td>
                         <td>
-                            <form action="" method="POST">
+                            <form action="{{ route('products.destroy', ['product' => $product]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" value="Delete" />
