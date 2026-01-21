@@ -46,4 +46,10 @@ class ProductController extends Controller
         $product->update($data);
         return redirect()->route('products.index')->with('success', 'Product update successfully');
     }
+
+    // delete product
+    public function destroy(Product $product){
+        $product->delete();
+        return redirect()->route('products.index')->with('success', 'Product deleted successfully');
+    }
 }
