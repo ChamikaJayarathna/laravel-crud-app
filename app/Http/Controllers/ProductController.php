@@ -29,4 +29,8 @@ class ProductController extends Controller
         Product::create($data);
         return redirect()->route('products.index');
     }
+
+    public function edit(Product $product){
+        dd($product);
+    }
 }
