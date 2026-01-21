@@ -8,6 +8,13 @@
 <body>
     <h1>Product</h1>
     <div class="">
+        @if (session()->has('success'))
+            <div class="">
+                {{ session('success') }}
+            </div>
+        @endif
+    </div>
+    <div class="">
         <table border="1">
             <tr>
                 <th>ID</th>
